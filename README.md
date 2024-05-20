@@ -20,6 +20,6 @@ cargo install onething-clip
 
 ```bash
 curl --silent --location \
-    https://raw.githubusercontent.com/intellis-team/onething-clip/install.sh | sh
+    https://raw.githubusercontent.com/intellis-team/onething-clip/main/install.sh | sh
 ```
 
