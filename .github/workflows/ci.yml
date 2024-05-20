@@ -126,8 +126,8 @@ jobs:
       - name: Install musl-tools on Linux
         run: sudo apt-get update --yes && sudo apt-get install --yes musl-tools
         if: contains(matrix.platform.name, 'musl')
-      - name: Install libssl-dev on Linux
-        run: sudo apt-get update --yes && sudo apt-get install --yes libssl-dev=1.1.1f-1ubuntu2.22
+      - name: Install make on linux
+        run: sudo apt-get update --yes && sudo apt-get install --yes make
         if: contains(matrix.platform.name, 'Linux')
       - name: Build binary
         uses: houseabsolute/actions-rust-cross@v0
