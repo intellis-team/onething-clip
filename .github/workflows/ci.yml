@@ -123,6 +123,9 @@ jobs:
       - name: Install musl-tools on Linux
         run: sudo apt-get update --yes && sudo apt-get install --yes musl-tools
         if: contains(matrix.platform.name, 'musl')
+      - name: Install libssl-dev on Linux
+        run: sudo apt-get update --yes && sudo apt-get install --yes libssl-dev
+        if: contains(matrix.platform.name, 'Linux')
       - name: Build binary
         uses: houseabsolute/actions-rust-cross@v0
         with:
@@ -160,6 +163,8 @@ jobs:
             github.ref == 'refs/tags/test-release' )
       - name: Publish GitHub release
         uses: softprops/action-gh-release@v2
+        permissions:
+          contents: write
         with:
           draft: true
           files: "onething-clip-*"
