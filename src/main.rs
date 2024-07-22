@@ -16,7 +16,7 @@ fn main() {
     let config_dir = project_dirs.config_dir();
     let config_file = config_dir.join("onething.toml");
 
-    let endpoint = "https://onething.matt.tew.io/api/clipboard";
+    let endpoint = "https://one.thing.tools/api/clipboard";
 
     let settings = Config::builder()
         .add_source(config::File::with_name(config_file.to_str().unwrap()))
