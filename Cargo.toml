@@ -1,6 +1,6 @@
 [package]
 name = "onething-clip"
-version = "0.1.9"
+version = "0.1.10"
 edition = "2021"
 description = "A personal command line tool to access the OneThing global clipboard"
 license = "MIT"
